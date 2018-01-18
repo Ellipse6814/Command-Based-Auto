@@ -24,6 +24,10 @@ public class PneumaticsSystem extends Subsystem{
 	}
 	
 	public void reverse() {
-		
+		RobotMap.solenoid.set(DoubleSolenoid.Value.kForward);
+	}
+	
+	public void off() {
+		RobotMap.solenoid.set(DoubleSolenoid.Value.kOff);
 	}
 }
