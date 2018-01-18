@@ -10,6 +10,7 @@ package org.usfirst.frc.team6814.robot;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -20,6 +21,7 @@ import edu.wpi.first.wpilibj.Compressor;
 public class RobotMap {
 	public static Spark leftMotor = new Spark(0);
 	public static Spark rightMotor = new Spark(1);
+	public static DifferentialDrive driveBot = new DifferentialDrive(leftMotor,rightMotor);
 	public static Compressor compressor = new Compressor(0);
 	public static DoubleSolenoid solenoid = new DoubleSolenoid(0,1);
 	// For example to map the left and right motors, you could define the
