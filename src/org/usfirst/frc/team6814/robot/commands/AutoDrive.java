@@ -6,12 +6,14 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class AutoDrive extends Command{
 	private boolean currentState = false;
+	private double currentSpeed = .3;
 	
 	@Override
 	protected void execute() {
-		RobotMap.driveBot.tankDrive(.3, .3);
+		RobotMap.driveBot.tankDrive(currentSpeed, currentSpeed);
 		if(RobotMap.timer.get() > 3) {
-			currentState = true;
+			currentSpeed *= -1;
+			RobotMap.timer.reset();
 		}
 	}
 	
