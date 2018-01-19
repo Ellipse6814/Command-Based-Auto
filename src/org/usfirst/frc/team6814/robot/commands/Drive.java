@@ -6,10 +6,12 @@ import edu.wpi.first.wpilibj.Joystick;
 import org.usfirst.frc.team6814.robot.RobotMap;
 
 public class Drive extends Command {
-	public Joystick controller;
+	public Joystick leftController;
+	public Joystick rightController;
 	
-	public Drive(Joystick controller) {
-		this.controller = controller;
+	public Drive(Joystick leftController, Joystick rightController) {
+		this.leftController = leftController;
+		this.rightController = rightController;
 	}
 
 	@Override
@@ -19,7 +21,7 @@ public class Drive extends Command {
 	
 	@Override
 	protected void execute() {
-		RobotMap.driveBot.tankDrive(controller.getRawAxis(2) * -1, controller.getRawAxis(5) * -1);
+		RobotMap.driveBot.tankDrive(leftController.getY() * -1, rightController.getY() * -1);
 	}
 	
 	@Override

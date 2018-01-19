@@ -42,7 +42,7 @@ public class Robot extends TimedRobot {
 		RobotMap.timer.start();
 		m_oi = new OI();
 		autoDrive = new AutoDrive();
-		drive = new Drive(m_oi.controller);
+		drive = new Drive(m_oi.leftController, m_oi.rightController);
 		m_chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser);
