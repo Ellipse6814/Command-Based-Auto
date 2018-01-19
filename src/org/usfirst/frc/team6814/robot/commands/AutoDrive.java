@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class AutoDrive extends Command{
 	private boolean currentState = false;
-	private double currentSpeed = .3;
+	private double currentSpeed = .5;
 	
 	@Override
 	protected void execute() {
