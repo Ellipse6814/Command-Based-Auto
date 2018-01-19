@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -19,6 +20,7 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
  * floating around.
  */
 public class RobotMap {
+	public static Timer timer = new Timer();
 	public static Spark leftMotor = new Spark(0);
 	public static Spark rightMotor = new Spark(1);
 	public static DifferentialDrive driveBot = new DifferentialDrive(leftMotor,rightMotor);

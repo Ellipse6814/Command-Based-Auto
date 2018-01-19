@@ -39,6 +39,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotInit() {
+		RobotMap.timer.start();
 		m_oi = new OI();
 		autoDrive = new AutoDrive();
 		drive = new Drive(m_oi.controller);
