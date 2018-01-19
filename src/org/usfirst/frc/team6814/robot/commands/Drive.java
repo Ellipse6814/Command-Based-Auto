@@ -21,7 +21,21 @@ public class Drive extends Command {
 	
 	@Override
 	protected void execute() {
-		RobotMap.driveBot.tankDrive(leftController.getY() * -1, rightController.getY() * -1);
+		 double leftStick = leftController.getY();
+		 double rightStick = rightController.getY();
+		 double leftPower = 0;
+		 double rightPower = 0;
+
+		 if (Math.abs(rightStick - leftStick) < 0.45) {
+			 double averagePower = (leftStick + rightStick) / 2;
+			 leftPower = averagePower;
+			 rightPower = averagePower;
+		 } else {
+			 leftPower = leftStick * .8;
+			 rightPower = rightStick * .8;
+		 }
+
+		 RobotMap.driveBot.tankDrive(leftPower * -1, rightPower * -1);
 	}
 	
 	@Override
