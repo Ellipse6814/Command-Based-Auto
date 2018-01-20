@@ -114,6 +114,7 @@ public class Robot extends TimedRobot {
 		}
 		//Scheduler.getInstance().add(drive);
 		drive.start();
+		grabbygrabby.start();
 	}
 
 	/**
