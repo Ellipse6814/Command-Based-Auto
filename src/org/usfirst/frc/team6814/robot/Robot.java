@@ -16,6 +16,7 @@ import org.usfirst.frc.team6814.robot.commands.ExampleCommand;
 import org.usfirst.frc.team6814.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team6814.robot.commands.Drive;
 import org.usfirst.frc.team6814.robot.commands.AutoDrive;
+import org.usfirst.frc.team6814.robot.commands.GrabbyGrabbyClose;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -29,6 +30,7 @@ public class Robot extends TimedRobot {
 	public static OI m_oi;
 	public Drive drive;
 	public AutoDrive autoDrive;
+	public GrabbyGrabbyClose grabbygrabby;
 
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -41,6 +43,7 @@ public class Robot extends TimedRobot {
 	public void robotInit() {
 		RobotMap.timer.start();
 		m_oi = new OI();
+		grabbygrabby = new GrabbyGrabbyClose(m_oi.rightController);
 		autoDrive = new AutoDrive();
 		drive = new Drive(m_oi.leftController, m_oi.rightController);
 		m_chooser.addDefault("Default Auto", new ExampleCommand());

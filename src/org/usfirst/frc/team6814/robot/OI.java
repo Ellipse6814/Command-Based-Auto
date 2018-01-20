@@ -10,8 +10,6 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-import org.usfirst.frc.team6814.robot.commands.GrabbyGrabbyClose;
-
 //import org.usfirst.frc.team6814.robot.commands.Drive;
 
 /**
@@ -24,7 +22,6 @@ public class OI {
 	public Button GrabbyGrabbyButton = new JoystickButton(rightController, 1);
 	
 	public OI() {
-		GrabbyGrabbyButton.whenPressed(new GrabbyGrabbyClose());
 		//button1.whenPressed(new Drive());
 		//controller.getRawAxis(5);
 	}
