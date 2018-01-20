@@ -33,7 +33,7 @@ public class GrabbyGrabbyCtrl extends Command{
 	
 	@Override
 	protected void end() {
-		RobotMap.solenoid.set(DoubleSolenoid.Value.kOff);
+		RobotMap.solenoid.set(DoubleSolenoid.Value.kOff); 
 		System.out.println("Intake: PROCESS TERMINATED");
 	}
 }
