@@ -19,10 +19,10 @@ public class GrabbyGrabbyCtrl extends Command{
 	protected void execute() {
 		if(this.rightStick.getRawButton(1)) {
 			RobotMap.solenoid.set(DoubleSolenoid.Value.kForward);
-			if (!lastAction) {lastAction = true;System.out.println("Intake: Grab");}
+		//	if (!lastAction) {lastAction = true;System.out.println("Intake: Grab");}
 		}else {
 			RobotMap.solenoid.set(DoubleSolenoid.Value.kReverse);
-			if (lastAction) {lastAction = false;System.out.println("Intake: Release");}
+		//	if (lastAction) {lastAction = false;System.out.println("Intake: Release");}
 		}
 	}
 	
