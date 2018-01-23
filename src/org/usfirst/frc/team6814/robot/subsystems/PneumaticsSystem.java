@@ -19,7 +19,7 @@ public class PneumaticsSystem extends Subsystem{
 		try {
 			RobotMap.solenoid.set(DoubleSolenoid.Value.kForward);
 		}catch(Exception e) {
-			System.out.println("FAILED TO SET SOLENOID TO FORWARD");
+			//System.out.println("FAILED TO SET SOLENOID TO FORWARD");
 		}
 	}
 	
