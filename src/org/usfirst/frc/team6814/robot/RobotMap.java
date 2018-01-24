@@ -21,9 +21,12 @@ import edu.wpi.first.wpilibj.Timer;
  */
 public class RobotMap {
 	public static Timer timer = new Timer();
-	public static Spark leftMotor = new Spark(0);
-	public static Spark rightMotor = new Spark(1);
-	public static DifferentialDrive driveBot = new DifferentialDrive(leftMotor,rightMotor);
+	public static Spark leftFrontMotor = new Spark(0);
+	public static Spark rightFrontMotor = new Spark(1);
+	public static Spark leftBackMotor = new Spark(2);
+	public static Spark rightBackMotor = new Spark(3);
+	public static DifferentialDrive driveFrontBot = new DifferentialDrive(leftFrontMotor,rightFrontMotor);
+	public static DifferentialDrive driveBackBot = new DifferentialDrive(leftBackMotor,rightBackMotor);
 	public static Compressor compressor = new Compressor(0);
 	public static DoubleSolenoid solenoid = new DoubleSolenoid(0,1);
 	// For example to map the left and right motors, you could define the
