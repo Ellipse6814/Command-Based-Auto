@@ -35,7 +35,7 @@ public class Drive extends Command {
 //			leftPower = leftStick * .6;
 //			rightPower = rightStick * .6;
 //		}
-		if (rightController.getRawButton(1)) {
+		if (leftController.getRawButton(1)) {
 			leftPower *= 0.6;
 			rightPower *= 0.6;
 		}
